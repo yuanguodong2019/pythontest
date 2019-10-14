@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="POST" action="/user/edit/?id={{list.id}}">
+    <P>名称 :<input type="text"name="name" value="{{list.name}}"></P>
+    <P>邮箱 :<input type="text"name="email"value="{{list.email}}"></P>
+    <P>密码 :<input type="text"name="password"value="{{list.password}}"></P>
+    <input type="submit" value="提交">
+</form>
+</body>
+</html>

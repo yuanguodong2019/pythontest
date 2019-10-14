@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>主页</title>
+</head>
+<body>
+<div>
+    <a href="/user/add/">添加</a>
+</div>
+        <table cellpadding="0" cellpadding="0" width="100%" border="1" >
+        <tr height="20">
+            <td>编号</td>
+            <td>姓名</td>
+            <td>邮箱</td>
+            <td>密码</td>
+        </tr>
+        {% for row in list %}
+        <tr>
+            <td><a href="/blog/view?id={{row.id}}">{{row.id}}</a></td>
+            <td>{{row.name}}</td>
+            <td>{{row.email}}</td>
+            <td>{{row.password}}</td>
+            <td><a href="/user/edit?id={{row.id}}">修改</a>&nbsp;<a href="/user/delete?id={{row.id}}">删除</a></td>
+        </tr>
+        {% empty %}
+        <tr><td colspan="4">还没有添加博客内容</td></tr>
+        {% endfor %}
+        </table>
+</body>
+</html>
